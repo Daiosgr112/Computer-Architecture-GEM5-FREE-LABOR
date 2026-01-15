@@ -1,0 +1,6 @@
+bench=specsjeng run=1 A=- B=- C=- D=- E=- F=+ G=+ cl=64 l1i=32kB/2 l1d=64kB/2 l2=512kB/16 cpi=7.040434 dmiss=0.121831 imiss=0.000020 l2miss=0.999972 out=spec_results/specsjeng/pb_run1_cl64_l1i32kB_2_l1d64kB_2_l2512kB_16
+bench=specsjeng run=2 A=+ B=+ C=- D=- E=- F=+ G=+ cl=64 l1i=64kB/4 l1d=64kB/2 l2=512kB/16 cpi=7.040438 dmiss=0.121831 imiss=0.000019 l2miss=0.999979 out=spec_results/specsjeng/pb_run2_cl64_l1i64kB_4_l1d64kB_2_l2512kB_16
+bench=specsjeng run=3 A=+ B=- C=+ D=- E=- F=+ G=+ cl=64 l1i=64kB/2 l1d=128kB/2 l2=512kB/16 cpi=7.040498 dmiss=0.121831 imiss=0.000019 l2miss=0.999983 out=spec_results/specsjeng/pb_run3_cl64_l1i64kB_2_l1d128kB_2_l2512kB_16
+bench=specsjeng run=4 A=+ B=- C=- D=+ E=- F=+ G=+ cl=64 l1i=64kB/2 l1d=64kB/4 l2=512kB/16 cpi=7.040450 dmiss=0.121831 imiss=0.000019 l2miss=0.999984 out=spec_results/specsjeng/pb_run4_cl64_l1i64kB_2_l1d64kB_4_l2512kB_16
+bench=specsjeng run=5 A=+ B=- C=- D=- E=+ F=+ G=+ cl=64 l1i=64kB/2 l1d=64kB/2 l2=2MB/16 cpi=7.042713 dmiss=0.121831 imiss=0.000019 l2miss=0.999979 out=spec_results/specsjeng/pb_run5_cl64_l1i64kB_2_l1d64kB_2_l22MB_16
+bench=specsjeng run=6 A=+ B=- C=- D=- E=- F=- G=+ cl=64 l1i=64kB/2 l1d=64kB/2 l2=512kB/8 cpi=5.112412 dmiss=0.099094 imiss=0.000125 l2miss=0.999809 out=spec_results/specsjeng/pb_run6_cl64_l1i64kB_2_l1d64kB_2_l2512kB_8
