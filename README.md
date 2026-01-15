@@ -18,7 +18,7 @@ cd ~/Desktop/gem5
 ```
 and the output is :
 
-![Output of Hello World](/home/daios/Documents/School/Gem5/first.png)
+![Output of Hello World](/Gem5/terminal.png)
 
 ### Q1
 Configuring the simulator with starter_se.py and and giving in parameters the above script we have the following parameters:
@@ -157,19 +157,19 @@ As we did in Step 1 we search in config.ini and stats.txt for some memory inform
 Also we plot some graphs here:
 
 ### Simulated seconds
-![sim_seconds](results1/sim_seconds.png)
+![sim_seconds](Gem5/results1/sim_seconds.png)
 
 ### CPI
-![cpi](results1/system.cpu.cpi.png)
+![cpi](Gem5/results1/system.cpu.cpi.png)
 
 ### L1 Data cache miss rate
-![l1 data cache miss rate](results1/system.cpu.dcache.overall_miss_rate::total.png)
+![l1 data cache miss rate](Gem5/results1/system.cpu.dcache.overall_miss_rate::total.png)
 
 ### L1 instruction cache miss rate
-![l1 instrtuctions miss rate](results1/system.cpu.icache.overall_miss_rate::total.png)
+![l1 instrtuctions miss rate](Gem5/results1/system.cpu.icache.overall_miss_rate::total.png)
 
 ### L2 cache miss rate
-![l2 cache miss rate](results1/system.l2.overall_miss_rate::total.png)
+![l2 cache miss rate](Gem5/results1/system.l2.overall_miss_rate::total.png)
 
 
 Now it is required from us to run the same plots in 1 Ghz and 4Ghz
@@ -177,37 +177,37 @@ Now it is required from us to run the same plots in 1 Ghz and 4Ghz
 ## 1Ghz:
 
 ## Simulated seconds
-![sim_seconds](results2/sim_seconds.png)
+![sim_seconds](Gem5/results2/sim_seconds.png)
 
 ### CPI
-![cpi](results2/system.cpu.cpi.png)
+![cpi](Gem5/results2/system.cpu.cpi.png)
 
 ### L1 Data cache miss rate
-![l1 data cache miss rate](results2/system.cpu.dcache.overall_miss_rate::total.png)
+![l1 data cache miss rate](Gem5/results2/system.cpu.dcache.overall_miss_rate::total.png)
 
 ### L1 instruction cache miss rate
-![l1 instrtuctions miss rate](results2/system.cpu.icache.overall_miss_rate::total.png)
+![l1 instrtuctions miss rate](Gem5/results2/system.cpu.icache.overall_miss_rate::total.png)
 
 ### L2 cache miss rate
-![l2 cache miss rate](results2/system.l2.overall_miss_rate::total.png)
+![l2 cache miss rate](Gem5/results2/system.l2.overall_miss_rate::total.png)
 
 
 ## 4Ghz:
 
 ## Simulated seconds
-![sim_seconds](results3/sim_seconds.png)
+![sim_seconds](Gem5/results3/sim_seconds.png)
 
 ### CPI
-![cpi](results3/system.cpu.cpi.png)
+![cpi](Gem5/results3/system.cpu.cpi.png)
 
 ### L1 Data cache miss rate
-![l1 data cache miss rate](results3/system.cpu.dcache.overall_miss_rate::total.png)
+![l1 data cache miss rate](Gem5/results3/system.cpu.dcache.overall_miss_rate::total.png)
 
 ### L1 instruction cache miss rate
-![l1 instrtuctions miss rate](results3/system.cpu.icache.overall_miss_rate::total.png)
+![l1 instrtuctions miss rate](Gem5/results3/system.cpu.icache.overall_miss_rate::total.png)
 
 ### L2 cache miss rate
-![l2 cache miss rate](results3/system.l2.overall_miss_rate::total.png)
+![l2 cache miss rate](Gem5/results3/system.l2.overall_miss_rate::total.png)
 
 
 ## System clock and Cpu clock;
@@ -220,11 +220,11 @@ If we add a cpu core inside the cluster it will effectively have the same freque
 
 ### What is even perfect scaling pff.
 
-![perfect scale](results3/perfect_scale.png)
+![perfect scale](Gem5/results3/perfect_scale.png)
 Here we should add the fact that a 4 time speedup in frequency doesn't really add up to 4 times less the simulation time.
 
 
-![scale_cpi](results3/scale_cpi.png)
+![scale_cpi](Gem5/results3/scale_cpi.png)
 Higher CPU frequency, each cycle is shorter, so memory stalls take more cycles to resolve. Memory hierarchy latency (especially beyond L1/L2) doesn’t shrink proportionally in time. The bottleneck now is memory-bound(accesses cache /DRAM latency or bandwidth).
 
 | Benchmarks | seconds | cpi |dcache msrt|icache msrt|l2 msrt |instsructions| systemclock | cpuclock |
@@ -250,7 +250,7 @@ For this we created our own script optimal.sh ! It just runs the benchmark we se
 
 
 We get the following graph with some randomized parameters:
-![cl](results4/cl.png)
+![cl](Gem5/results5/cl.png)
 Since the the biggest change is attributed to cache line size or block size there is little reason to show the other graphs that way.We can assess the impact of the parameters only when keeping cache line size the same.
 #### You may ask why is block size so important ;
 The simplest way to reduce miss rate is to increase the block size.Larger block sizes will reduce also compulsory misses. This reduction occurs
@@ -259,7 +259,7 @@ locality. Larger blocks take advantage of spatial locality.
 #### Note from author:
 Before giving new data I need to stress that I only experiment with one benchmark specificaly specsjeng . What we conclude is not generally optimal variables just the ones that work on our specific benchmark. They may vary greatly in importance from one benchmark to another.  
 #### New data with same optimal block size :
-![significance](results4/significance.png)
+![significance](Gem5/results5/significance.png)
 
 We can deduct that l2 size has the biggest significance outside of block size. It may not be shown in the graph but we achieved that difference in CPI by reducing L2 size. As we are inclined to keep CPI smaller we shouldn't reduce L2 for better performance.
 
