@@ -315,3 +315,15 @@ $$ Cost_{money} = 20 \frac{x_{l1d}}{16} + 20\frac{x_{l1i}}{16} + 2\frac{x_{l1dAs
 To conlcude, in order to judge our investment we use the value-for-money formula which is considering both performance and price to pay. Our newly created Cost function.
 
 $$ Cost = Cost_{money} + Cost_{performance} $$ $$ Cost = \frac{x_{l1d}}{16} +\frac{x_{l1i}}{16} + \frac{x_{l1dAss}}{4} + \frac{x_{l1iAss}}{4} + x_{l2} + x_{l2Ass} + x_{cl} + 20 \frac{x_{l1d}}{16} + $$ $$ + 20\frac{x_{l1i}}{16} + 2\frac{x_{l1dAss}}{4} + 2\frac{x_{l1iAss}}{4} + 5 x_{l2} + 1 x_{l2Ass} + 0.1x_{cl} $$
+
+## Sources
+
+- gem5 SimpleCPU: https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU
+- gem5 O3CPU: https://www.gem5.org/documentation/general_docs/cpu_models/O3CPU
+- gem5 TraceCPU: https://www.gem5.org/documentation/general_docs/cpu_models/TraceCPU
+- gem5 MinorCPU: https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu
+- Computer Architecture: A Quantitative Approach, John L. Hennessy, David A. Patterson
+- https://en.wikipedia.org/wiki/CPU_cache
+- https://www.gem5.org/documentation/learning_gem5/part2/parameters/
+- https://hazelcast.com/foundations/caching/caching/
+- https://en.wikipedia.org/wiki/Cache_(computing)
