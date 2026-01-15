@@ -267,13 +267,13 @@ L2 asscociativity also seems to be playing a moderate role in our benchmarks. Ot
 ## Cost function
 
 How do we approach this problem. Let's normalize the values first in a range 0-1.
->- $$ x_{l1d} = L1Dsize/128kb  $$
->- $$ x_{l1i} = L1Isize/128Kb  $$
->- $$ x_{l2} = L2size / 2Mb $$
->- $$ x_{l1dAss} = L1DAs / 4$$
->- $$ x_{l1iAss} = L1IAs / 4$$
->- $$ x_{l2Ass} = L2As / 16 $$
->- $$ x_{cl} = clsize / 64  $$
+$$ x_{l1d} = L1Dsize/128kb  $$
+$$ x_{l1i} = L1Isize/128Kb  $$
+$$ x_{l2} = L2size / 2Mb $$
+$$ x_{l1dAss} = L1DAs / 4$$
+$$ x_{l1iAss} = L1IAs / 4$$
+$$ x_{l2Ass} = L2As / 16 $$
+$$ x_{cl} = clsize / 64  $$
 
 An example of cost function :
 $$ Cost_{performance} =  x_{l1d}+x_{l1i}+x_{l1dAss}+x_{l1iAss}+x_{l2}+x_{l2Ass}+x_{cl} $$
