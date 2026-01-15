@@ -267,13 +267,13 @@ L2 asscociativity also seems to be playing a moderate role in our benchmarks. Ot
 ## Cost function
 
 How do we approach this problem. Let's normalize the values first in a range 0-1.
-- $$ x_{l1d} = L1Dsize/128kb  $$
-- $$ x_{l1i} = L1Isize/128Kb  $$
-- $$ x_{l2} = L2size / 2Mb $$
-- $$ x_{l1dAss} = L1DAs / 4$$
-- $$ x_{l1iAss} = L1IAs / 4$$
-- $$ x_{l2Ass} = L2As / 16 $$
-- $$ x_{cl} = clsize / 64  $$
+>- $$ x_{l1d} = L1Dsize/128kb  $$
+>- $$ x_{l1i} = L1Isize/128Kb  $$
+>- $$ x_{l2} = L2size / 2Mb $$
+>- $$ x_{l1dAss} = L1DAs / 4$$
+>- $$ x_{l1iAss} = L1IAs / 4$$
+>- $$ x_{l2Ass} = L2As / 16 $$
+>- $$ x_{cl} = clsize / 64  $$
 
 An example of cost function :
 $$ Cost_{performance} =  x_{l1d}+x_{l1i}+x_{l1dAss}+x_{l1iAss}+x_{l2}+x_{l2Ass}+x_{cl} $$
@@ -297,7 +297,7 @@ $$ Cost_{performance} =  2x_{l1d} + 0.1\frac{1}{x_{l1i}}  + x_{l1dAss} + 0.2x_{l
 Altough in a theoretical context we can safely simulate what is giving better performance, we are also obliged to be mindfull of the cost of such an implementation. As engineers we want our choices to have value. L1 technology is more expenisive than L2 but block size not at all. Associativity introduces some complexity which probably can also drive the price up.
 We also can't normalize in the same way the values.
 Just for the size of l1 and l2 we will use the maximum size from both in order to be in equal terms. It could be like so:
-$$ x_{l1d}= \frac{L1size}{L2maxsiz} = \frac{L1size}{2Mb}= $$ $$= \frac{x_{l1d}}{2Mb/128Kb} = \frac{x_{l1d}}{16} $$ 
+$$ x_{l1d}= \frac{L1size}{L2maxsiz} = \frac{L1size}{2Mb}= \frac{x_{l1d}}{2Mb/128Kb} = \frac{x_{l1d}}{16} $$ 
 Same in associativity.
 
 Thus we have:
